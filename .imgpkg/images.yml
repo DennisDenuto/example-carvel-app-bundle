@@ -1,0 +1,16 @@
+---
+apiVersion: imgpkg.carvel.dev/v1alpha1
+images:
+- annotations:
+    kbld.carvel.dev/id: hello-world-carvel
+    kbld.carvel.dev/origins: |
+      - local:
+          path: /home/runner/work/example-carvel-app/example-carvel-app
+      - git:
+          dirty: true
+          remoteURL: https://github.com/DennisDenuto/example-carvel-app
+          sha: 6ac3fb487400696cbd52f66332d655de11f353b3
+          tags:
+          - v0.0.1
+  image: ghcr.io/dennisdenuto/hello-world-carvel-gh@sha256:ceecc083db73c9cde083ed1ca94261747cc1322405865eb2ee6586c617142d1f
+kind: ImagesLock
